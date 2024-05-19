@@ -1,0 +1,29 @@
+/* .home_content {
+    display: flex;
+    flex-direction: row;
+    
+} */
+
+#testimonio-clientes-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer {
+    border: 2px solid red;  
+}
+
+.footer-block {
+    margin: 30px;
+}
+
+.main-service-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: column;
+    background-color: red;
+}
+
+
+
