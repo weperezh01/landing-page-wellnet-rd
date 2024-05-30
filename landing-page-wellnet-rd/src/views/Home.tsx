@@ -3,8 +3,38 @@ import Banner from "../components/Banner";
 import HomeServices from "../components/HomeServices";
 import "../styles/Home.css";
 import cardImage from "../resoucers/img/img_avatar.png";
+import CardHome from '../components/CardHome';
+import Testimonials from "../components/Testimonials";
+import Footer from '../components/Footer';
 
 function Home() {
+  const planList = [{
+    id: 1,
+    nombrePlan: "Plan Basico",
+    descripcion: "El plan que se adapta a ti",
+    descarga: 100,
+    subida: 50,
+    precio: 1600.00
+  }, {
+    id: 2,
+    nombrePlan: "Plan Medio",
+    descripcion: "El plan intemedio para ti",
+    descarga: 150,
+    subida: 80,
+    precio: 1700.00
+  }, {
+    id: 3,
+    nombrePlan: "Plan Premiun",
+    descripcion: "El mejor plan que puedes encontrar",
+    descarga: 200,
+    subida: 100,
+    precio: 1800.00
+  }]
+
+  const listaRenderizar = planList.map((plan) => {
+    return <CardHome planInfo={plan} />
+  })
+
   return (
     <div id="home_content" className="home_content">
       <Header />
@@ -16,42 +46,14 @@ function Home() {
           Aqui debe de ir un apartado rapido del cliente elegir de nuestros
           principales servicios
         </p> */}
-        <div id="" className="main-service-item">
-          {/* Card */}
-          <div className="card">
-            <img src={cardImage} alt="Avatar" width={100} />
-            <div className="container">
-              <h4>
-                <b>Servicio uno</b>
-              </h4>
-              <p>Architect & Engineer</p>
-            </div>
-          </div>
-          {/* Card */}
-
-          {/* Card */}
-          <div className="item">
-            <img src={cardImage} alt="Avatar" width={100} />
-            <div className="container">
-              <h4>
-                <b>Servicio</b>
-              </h4>
-              <p>Architect & Engineer</p>
-            </div>
-          </div>
-          {/* Card */}
-
-          {/* Card */}
-          <div className="item">
-            <img src={cardImage} alt="Avatar" width={100} />
-            <div className="container">
-              <h4>
-                <b>Servico</b>
-              </h4>
-              <p>Architect & Engineer</p>
-            </div>
-          </div>
-          {/* Card */}
+        <div id="main-service-item" className="main-service-item">
+          {/* Card implementando renderizado automatico*/}
+          <>
+            {
+              listaRenderizar
+            }
+          </>
+          {/* Card implementando renderizado automatico*/}
         </div>
       </section>
       {/* main services */}
@@ -74,39 +76,15 @@ function Home() {
       {/* Informacion sobre la empresa que se quiera ilustrar a primera impresion */}
 
       {/* Contenido del testimonio de los clientes */}
-      <section
-        id="testimonio-clientes-section"
-        className="testimonio-clientes-setion"
-      >
-        <h1>Testimonios de algunos de nuestros clientes</h1>
-        <div>
-          <div className="testimonio">
-            <h4>Nombre del cliente</h4>
-            <p>Comentario que debe hacer el cliente sobre los productos</p>
-          </div>
-
-          <div className="testimonio">
-            <h4>Nombre del cliente</h4>
-            <p>Comentario que debe hacer el cliente sobre los productos</p>
-          </div>
-
-          <div className="testimonio">
-            <h4>Nombre del cliente</h4>
-            <p>Comentario que debe hacer el cliente sobre los productos</p>
-          </div>
-        </div>
+      <section id="testimonio-clientes-section" className="testimonio-clientes-setion">
+        {/* Esta en revision, no me agrada aun */}
+        <Testimonials />
       </section>
       {/* Contenido del testimonio de los clientes */}
 
       {/* Pie de pagina */}
       <section className="footer">
-        <div className="footer-block">
-          <h1>Esto es el pie de pagina</h1>
-        </div>
-        <div className="footer-block">Algun otro contenido debe ir aquí</div>
-        <div className="footer-block">
-          Aqui debe ir la parte de los derechos reservados
-        </div>
+        <Footer/>
       </section>
       {/* Pie de pagina */}
     </div>

@@ -9,20 +9,31 @@
     flex-direction: row;
 }
 
-.footer {
-    border: 2px solid red;  
-}
-
-.footer-block {
-    margin: 30px;
+.main-services {
+    /* background-color: rgb(41, 69, 148); */
+    background-color: rgba(245,130,32,255);
+    height: auto; /*debo dejarlo en auto para cuando haga wrap no se distorcione*/
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 60px;
 }
 
 .main-service-item {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    align-items:center;
     justify-content: space-around;
-    flex-wrap: column;
-    background-color: red;
+    flex-wrap: wrap;    
+}
+
+.item {
+    margin-top: 1.4em;
+}
+
+.item .card-image {
+    height: 15em;
+    width: 15em;
 }
 
 
