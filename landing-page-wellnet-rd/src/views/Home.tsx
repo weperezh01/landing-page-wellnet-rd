@@ -7,6 +7,54 @@ import CardHome from '../components/CardHome';
 import Testimonials from "../components/Testimonials";
 import Footer from '../components/Footer';
 
+// ======DATOS PROVISIONALES====
+
+// type TestimonialType = {
+//   testimonialsText: string
+//   nameCustomer: string,
+//   image: string
+// }
+
+type TestimonialType = {
+  testimonialsText: string;
+  nameCustomer: string;
+  image: string;
+}
+
+//DATA PA PASAR A COMPONENTES Y MOSTRARLAS 
+const testimonialsListValue: TestimonialType[] = [
+  {
+    testimonialsText: "El mejor servicio El mejor servicioEl mejor servicioEl mejor servicioEl mejor servicioEl mejor servicioEl mejor servicio",
+    nameCustomer: "Fulano de Tal",
+    image: "../resoucers/img/eourInstructors3.svg",
+  },
+  {
+    testimonialsText: "El mejor servicio El mejor servicioEl mejor servicioEl mejor servicioEl mejor servicioEl mejor servicioEl mejor servicio",
+    nameCustomer: "Fulano de Tal",
+    image: "../resoucers/img/eourInstructors3.svg",
+  },
+  {
+    testimonialsText: "El mejor servicio El mejor servicioEl mejor servicioEl mejor servicioEl mejor servicioEl mejor servicioEl mejor servicio",
+    nameCustomer: "Fulano de Tal",
+    image: "../resoucers/img/eourInstructors3.svg",
+  },
+];
+
+const footerData = {
+    aboutUs: {
+      aboutUsText: "Somos una empresa dedicada a la instalacion de servicio de internet con el mejor resultado del pais."
+    },
+    quickLinks: [
+      {
+        titleLink: "Home",
+        link: ""
+      }
+    ]
+  }
+
+
+//DATA PA PASAR A COMPONENTES Y MOSTRARLAS 
+
 function Home() {
   const planList = [{
     id: 1,
@@ -78,13 +126,14 @@ function Home() {
       {/* Contenido del testimonio de los clientes */}
       <section id="testimonio-clientes-section" className="testimonio-clientes-setion">
         {/* Esta en revision, no me agrada aun */}
-        <Testimonials />
+        <>{console.log(testimonialsListValue)}</>
+        <Testimonials testimonialsList={testimonialsListValue} />
       </section>
       {/* Contenido del testimonio de los clientes */}
 
       {/* Pie de pagina */}
       <section className="footer">
-        <Footer/>
+        <Footer />
       </section>
       {/* Pie de pagina */}
     </div>
