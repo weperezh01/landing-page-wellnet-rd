@@ -70,14 +70,16 @@ function Home() {
     descarga: 150,
     subida: 80,
     precio: 1700.00
-  }, {
+  }, 
+  {
     id: 3,
     nombrePlan: "Plan Premiun",
     descripcion: "El mejor plan que puedes encontrar",
     descarga: 200,
     subida: 100,
     precio: 1800.00
-  }]
+  }
+]
 
   const listaRenderizar = planList.map((plan) => {
     return <CardHome planInfo={plan} />

@@ -13,8 +13,9 @@
     height: auto;
 }
 
+/* Si aumento el padding la tercera columna se hace mas grande, ojo con esto */
 .product-info {
-    padding: 20px;
+    padding: 10px;
 }
 
 .product-title {

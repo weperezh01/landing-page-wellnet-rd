@@ -1,57 +1,109 @@
-import '../styles/Footer.css';
+import "../styles/Footer.css";
 
-function Footer() {
+//Fake data
+const footerSections = [
+    {
+        title: "Quick links",
+        links: [
+            { text: "About Us", url: "" },
+            { text: "Careers", url: "" },
+            { text: "Contact Us", url: "" },
+        ],
+    },
+    {
+        title: "Siguenos",
+        links: [
+            { text: "Facebook", url: "https://facebook.com" },
+            { text: "Twitter", url: "https://twitter.com" },
+            { text: "Instagram", url: "https://instagram.com" },
+        ],
+    },
+];
+
+const contactoSections = {
+    telefono: [
+        { phone: "8291236578" }
+    ],
+    correo: [
+        { email: "correopordefault@gmail.com" }
+    ],
+    direccion: [
+        { direccion: "Espaillat, Rep. Dom." }
+    ],
+    acercaDe: "Somo una empresa dedicada a realizar servicios de internet. La mejor empresa que hay en el mercado de servicios de internet y más, ven y confia.",
+    copyRight: "copyright @ 2024 by EM Software",
+}
+
+const Footer = () => {
     return (
         <div className="footer">
             <div className="box-container">
                 <div className="box">
-                    <h3>about us</h3>
+                    <h3>About us</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-                        labore voluptatibus ducimus eum libero, accusantium mollitia quam
-                        dignissimos itaque aliquam odio reprehenderit! Sint aspernatur, recusandae
-                        vitae libero natus voluptates quaerat?
+                        {contactoSections.acercaDe}
                     </p>
                 </div>
 
-                <div className="box">
-                    <h3>quick links</h3>
-                    <a href="#">home</a>
-                    <a href="#">features</a>
-                    <a href="#">about</a>
-                    <a href="#">review</a>
-                    <a href="#">pricing</a>
-                    <a href="#">contact</a>
-                </div>
+                {
+                    footerSections.map((section, index) => {
+                        return (
+                            <div key={index} className="box">
+                                <h3>{section.title}</h3>
+                                {
+                                    <a title="" href="#">{section.links.map((link, linkIndex) => {
+                                        return (
+                                            <a key={linkIndex} href={link.url}>{link.text}</a>
+                                        )
+                                    })}</a>
+                                }
+                            </div>
+                        )
+                    })
+                }
 
-                <div className="box">
-                    <h3>follow us</h3>
-                    <a href="#">facebook</a>
-                    <a href="#">instagram</a>
-                    <a href="#">pinterest</a>
-                    <a href="#">twitter</a>
-                </div>
+                {
+                    <div className="box">
+                        <h3>Contacto react</h3>
+                        <div className="info">
+                            <i className="fas fa-phone"></i>
+                            {
+                                contactoSections.telefono.map((phone, index) => {
+                                    return(
+                                        <p>{`+${phone.phone}`}</p>
+                                    )
+                                })
+                            }
+                        </div>
+                        <div className="info">
+                            <i className="fas fa-envelope"></i>
+                            {
+                                contactoSections.correo.map((correo, index) => {
+                                    return(
+                                        <p>{`${correo.email}`}</p>
+                                    )
 
-                <div className="box">
-                    <h3>contact info</h3>
-                    <div className="info">
-                        <i className="fas fa-phone"></i>
-                        <p>+123-456-7890 <br />+333-222-1111 </p>
+                                })
+                            }
+                        </div>
+                        <div className="info">
+                            <i className="fas fa-map-marker-alt"></i>
+                            {
+                                contactoSections.direccion.map((direccion, index) => {
+                                    return(
+                                        <p>{`${direccion.direccion}`}</p>
+                                    )
+
+                                })
+                            }
+                        </div>
                     </div>
-                    <div className="info">
-                        <i className="fas fa-envelope"></i>
-                        <p>randomemail@gmail.com <br /> otheremail@gmail.com </p>
-                    </div>
-                    <div className="info">
-                        <i className="fas fa-map-marker-alt"></i>
-                        <p>Espaillat, Rep. Dom. </p>
-                    </div>
-                </div>
+                }               
             </div>
 
-            <h1 className="credit">&copy; copyright @ 2021 by EM Software </h1>
+            <h1 className="credit">&copy; {contactoSections.copyRight} </h1>
         </div>
-    )
-}
+    );
+};
 
-export default Footer
+export default Footer;
