@@ -1,4 +1,50 @@
 .services {
-    display: flex;
+    /* display:flex;
     flex-direction: row;
+    flex-wrap:wrap; */
+    /* width:33%; */
+    /* text-wrap:wrap; */
+    /* justify-content: space-around; */
+
+    /* display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    flex-wrap: wrap; */
+
+    display: flex; 
+   justify-content: space-between; 
+   flex-wrap: wrap; 
+    
 }
+
+.img-homeservice {
+    /* height: 10rem; */
+    /* height: 33%; */
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.card-wrap {
+    text-align: center;
+}
+
+#home-services-title {
+    text-align: center;
+    margin: 1.1rem;
+}
+
+/*PROBANDO */
+@media (min-width: 56rem) {
+    .card {
+      width: 33.3333%;
+    }
+  }

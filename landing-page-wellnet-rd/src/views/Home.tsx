@@ -6,6 +6,7 @@ import cardImage from "../resoucers/img/img_avatar.png";
 import CardHome from '../components/CardHome';
 import Testimonials from "../components/Testimonials";
 import Footer from '../components/Footer';
+import {HomeServiceType} from "../components/HomeServices"
 
 // ======DATOS PROVISIONALES====
 
@@ -16,6 +17,7 @@ import Footer from '../components/Footer';
 // }
 
 type TestimonialType = {
+  id: number;
   testimonialsText: string;
   nameCustomer: string;
   image: string;
@@ -24,16 +26,19 @@ type TestimonialType = {
 //DATA PA PASAR A COMPONENTES Y MOSTRARLAS 
 const testimonialsListValue: TestimonialType[] = [
   {
+    id: 1,
     testimonialsText: "El mejor servicio El mejor servicioEl mejor servicioEl mejor servicioEl mejor servicioEl mejor servicioEl mejor servicio",
     nameCustomer: "Fulano de Tal",
     image: "../resoucers/img/eourInstructors3.svg",
   },
   {
+    id: 2,
     testimonialsText: "El mejor servicio El mejor servicioEl mejor servicioEl mejor servicioEl mejor servicioEl mejor servicioEl mejor servicio",
     nameCustomer: "Fulano de Tal",
     image: "../resoucers/img/eourInstructors3.svg",
   },
   {
+    id: 3,
     testimonialsText: "El mejor servicio El mejor servicioEl mejor servicioEl mejor servicioEl mejor servicioEl mejor servicioEl mejor servicio",
     nameCustomer: "Fulano de Tal",
     image: "../resoucers/img/eourInstructors3.svg",
@@ -51,6 +56,27 @@ const footerData = {
       }
     ]
   }
+
+  const homeServiceData: HomeServiceType[] = [{
+    serviceName: "Dron v5",
+    // serviceImage: "https://images.pexels.com/photos/724921/pexels-photo-724921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    serviceImage: "https://images.pexels.com/photos/442587/pexels-photo-442587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    serviceDescription: "Este dron es suoperior a todos de sus generación por su gran potencia de vuelo. " + 
+    "Este dron es suoperior a todos de sus generación por su gran potencia de vuelo. Este dron es suoperior a todos de sus generación por su gran potencia de vuelo."
+  },
+  {
+    serviceName: "Dron v6 pro Ultimate",
+    // serviceImage: "https://images.pexels.com/photos/442587/pexels-photo-442587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    serviceImage: "https://images.pexels.com/photos/442587/pexels-photo-442587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    serviceDescription: "El mas potente del mercado, no tiene comparación."
+  },
+  {
+    serviceName: "Dron v6 pro Ultimate",
+    // serviceImage: "https://images.pexels.com/photos/3761163/pexels-photo-3761163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    serviceImage: "https://images.pexels.com/photos/442587/pexels-photo-442587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    serviceDescription: "La verdadera gafa de realidad virtual."
+  }
+]
 
 
 //DATA PA PASAR A COMPONENTES Y MOSTRARLAS 
@@ -96,7 +122,7 @@ function Home() {
           Aqui debe de ir un apartado rapido del cliente elegir de nuestros
           principales servicios
         </p> */}
-        <div id="main-service-item" className="main-service-item">
+        <div id="main-service-item" className="main-service-item" >
           {/* Card implementando renderizado automatico*/}
           <>
             {
@@ -108,8 +134,8 @@ function Home() {
       </section>
       {/* main services */}
 
-      <section className="services" id="services">
-        <HomeServices />
+      <section className="services-section" id="services-section">
+        <HomeServices homeServiceList={homeServiceData}/>
       </section>
 
       {/* Informacion sobre la empresa que se quiera ilustrar a primera impresion */}
@@ -128,7 +154,6 @@ function Home() {
       {/* Contenido del testimonio de los clientes */}
       <section id="testimonio-clientes-section" className="testimonio-clientes-setion">
         {/* Esta en revision, no me agrada aun */}
-        <>{console.log(testimonialsListValue)}</>
         <Testimonials testimonialsList={testimonialsListValue} />
       </section>
       {/* Contenido del testimonio de los clientes */}

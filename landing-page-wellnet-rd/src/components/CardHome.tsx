@@ -1,8 +1,8 @@
 import cardImage from "../resoucers/img/velocidad-internet-2.png";
 import '../styles/CardHome.css';
 
+//TODO: DEBO CREAR UNA INTERFACE O TYPO PARA ESTE PARAMETRO QUE RECIBE
 function CardHome(planInfo: any) {
-  console.log(planInfo.planInfo.nombrePlan)
   return (
     <div className="product-card" id={planInfo.id}>
         <img src={cardImage} alt="Product Image" className="product-image"/>
@@ -14,7 +14,7 @@ function CardHome(planInfo: any) {
                   <p>Descarga</p>
                   <p>{planInfo.planInfo.descarga}</p>
                 </li>
-                <li id={`${planInfo.id} 2`}>
+                <li id={`${planInfo.id}`}>
                   <p>Subida</p>
                   <p>{planInfo.planInfo.subida}</p>
                 </li>                

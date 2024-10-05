@@ -3,6 +3,7 @@ import image2 from "../resoucers/img/eourInstructors3.svg";
 
 //====== tipo
 type TestimonialType = {
+    id: number;
     testimonialsText: string;
     nameCustomer: string;
     image: string;
@@ -27,7 +28,7 @@ const Testimonials: React.FC<Props> = ({ testimonialsList }): JSX.Element => {
                         {
                             testimonialsList.map((testimonial) => {
                                 return (
-                                    <div className="responsive-container-block content">
+                                    <div className="responsive-container-block content" id={`${testimonial.id}`}>
                                         {/* TODO: DEBO HACER QUE LAS IMAGENES SE CARGUEN DESDE EL JSON CON LA INFORMACIONES, NO SE MUESTRA SI NO ES IMPORTADA DIRECTAMENTE*/}
                                         <img
                                             className="profile-img"
