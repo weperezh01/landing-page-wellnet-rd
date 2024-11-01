@@ -1,50 +1,41 @@
 .services {
-    /* display:flex;
+    display: flex;
     flex-direction: row;
-    flex-wrap:wrap; */
-    /* width:33%; */
-    /* text-wrap:wrap; */
-    /* justify-content: space-around; */
-
-    /* display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:space-between;
-    flex-wrap: wrap; */
-
-    display: flex; 
-   justify-content: space-between; 
-   flex-wrap: wrap; 
+    flex-wrap: wrap;
+    justify-content: space-around;
     
-}
-
-.img-homeservice {
-    /* height: 10rem; */
-    /* height: 33%; */
-    width: 200px;
-    height: 200px;
-    text-align: center;
+    
+    border: 2px solid rgb(20, 20, 20); /*eliminar esta linea, solo es para marcar*/
+    background-color: rgb(215, 218, 213);
 }
 
 .card {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: 1.5rem;
+    width: 33%;
+    margin: 0.1em;
+    text-align: center;
+    padding-top: 1.2em;
+    justify-content: space-around;    
+    place-content: center;
+    padding: 15px 15px 10px;
+
+
+    /* codigo de prueba */
+    /* border: 1px solid yellow; */
 }
 
-.card-wrap {
+.img-homeservice {
+    width: 16em;
+    height: 16em;
+}
+
+.service-description p{
     text-align: center;
 }
 
-#home-services-title {
-    text-align: center;
-    margin: 1.1rem;
-}
-
-/*PROBANDO */
-@media (min-width: 56rem) {
-    .card {
-      width: 33.3333%;
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
     }
-  }
+}

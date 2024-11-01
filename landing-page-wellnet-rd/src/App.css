@@ -1,24 +1,27 @@
 /* Esto aplica para el calculo del ancho de los elementos, para tener mayor control */
 /*  https://midu.dev/que-es-y-para-que-sirve-box-sizing-border-box/ */
 html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 /* Esto aplica para el calculo del ancho de los elementos, para tener mayor control */
 
 * {
-    margin: 0;
-    /* background-color: rgb(141, 182, 192); */
-    margin: 0;
-	padding: 0;
-	/* box-sizing: border-box; */
-	font-family: 'Open Sans';
+  margin: 0;
+  /* background-color: rgb(141, 182, 192); */
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  font-family: 'Open Sans';
 }
 
 body {
-    padding: 1.2%;
-    background-size: cover;
+  padding: 1.2%;
+  background-size: cover;
 }

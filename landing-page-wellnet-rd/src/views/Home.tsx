@@ -61,20 +61,20 @@ const footerData = {
     serviceName: "Dron v5",
     // serviceImage: "https://images.pexels.com/photos/724921/pexels-photo-724921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     serviceImage: "https://images.pexels.com/photos/442587/pexels-photo-442587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    serviceDescription: "Este dron es suoperior a todos de sus generación por su gran potencia de vuelo. " + 
-    "Este dron es suoperior a todos de sus generación por su gran potencia de vuelo. Este dron es suoperior a todos de sus generación por su gran potencia de vuelo."
+    serviceDescription: "Este dron es suoperior a todos de sus generación por su gran potencia de vuelo."
   },
   {
     serviceName: "Dron v6 pro Ultimate",
     // serviceImage: "https://images.pexels.com/photos/442587/pexels-photo-442587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     serviceImage: "https://images.pexels.com/photos/442587/pexels-photo-442587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    serviceDescription: "El mas potente del mercado, no tiene comparación."
+    serviceDescription: "Este dron es suoperior a todos de sus generación por su gran potencia de vuelo. ... Este dron es suoperior a todos de sus generación por su gran potencia de vuelo." + 
+    "Este dron es suoperior a todos de sus generación por su gran potencia de vuelo. ... Este dron es suoperior a todos de sus generación por su gran potencia de vuelo." 
   },
   {
     serviceName: "Dron v6 pro Ultimate",
     // serviceImage: "https://images.pexels.com/photos/3761163/pexels-photo-3761163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     serviceImage: "https://images.pexels.com/photos/442587/pexels-photo-442587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    serviceDescription: "La verdadera gafa de realidad virtual."
+    serviceDescription: "Este dron es suoperior a todos de sus generación por su gran potencia de vuelo."
   }
 ]
 
